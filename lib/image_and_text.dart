@@ -15,23 +15,36 @@ class ImageAndText extends StatelessWidget{
                 SizedBox(
                   height: 80,
                 ),
+                Text(
+                    "Learn Flutter the Fun Way",
+                    style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                  ),
+                ),
                 const SizedBox(
                   height: 30,
                   ),
-                  OutlinedButton(
+                  OutlinedButton.icon(
+                    
+                    icon: const Icon(Icons.arrow_circle_right_outlined, size: 40),
                     onPressed: () {},
                     style: OutlinedButton.styleFrom(
                       foregroundColor: Colors.white,
+                      padding: EdgeInsets.symmetric(
+                        vertical: 20,
+                        horizontal: 40
+                      )
                     ),
-                    child: TextButton(
+                    label: TextButton(
                       onPressed: (){},
                       style: TextButton.styleFrom(
-                        padding: const EdgeInsets.all(20),
-                        textStyle: const TextStyle(
-                          fontSize: 28,
-                          ),
+                      padding: const EdgeInsets.all(20),
+                      textStyle: const TextStyle(
+                        fontSize: 28,
                         ),
-                      child: Text("Start Quiz!",),
+                      ),
+                      child: Text("Start Quiz!"),
                     ),
                   ),
             ],
