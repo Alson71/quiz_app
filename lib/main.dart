@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
-import 'start_screen.dart';
+import 'quiz.dart';
 void main() {
   runApp(
-    MaterialApp(
-          home: Scaffold(
-            body: StartScreen(Alignment.topLeft,Alignment.bottomRight),
-          ),
-      ),
+   Quiz()
   );
 }
 
