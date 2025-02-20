@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'quiz.dart';
 class ImageAndText extends StatelessWidget{
   const ImageAndText({super.key});
 

@@ -1,9 +1,11 @@
 import "package:flutter/material.dart";
 import 'image_and_text.dart';
 class StartScreen extends StatelessWidget {
-  StartScreen(this.startAlignment, this.endAlignment,{ super.key});
-  Alignment startAlignment;
-  Alignment endAlignment;
+  const StartScreen(this.startAlignment, this.endAlignment, this.startQuiz, {super.key});
+
+  final Alignment startAlignment;
+  final Alignment endAlignment;
+  final void Function() startQuiz;
 
   @override
   Widget build(BuildContext context) {
