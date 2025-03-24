@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/questions_screen.dart';
+import 'package:quiz_app/results_screen.dart';
 import 'package:quiz_app/start_screen.dart';
 import 'package:quiz_app/data/questions.dart';
 
@@ -20,10 +21,16 @@ class _QuizState extends State<Quiz> {
     selectedAnswers.add(answer);
     if(selectedAnswers.length == questions.length){
         setState((){
+          activeScreen = ResultsScreen(chosenAnswers: selectedAnswers, backToStart: backToStart);
           selectedAnswers = [];
-          activeScreen = StartScreen(switchScreen);
         });
     }
+  }
+
+  void backToStart(){
+    setState((){
+      activeScreen = StartScreen(switchScreen);
+    });
   }
 
   @override
